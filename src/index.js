@@ -68,7 +68,7 @@ const handleIgnoreIdentifierRegx = (identifier, unit) => {
   return new RegExp(pattern, 'ig');
 };
 
-export default postcss.plugin('postcss-plugin-px2rem', options => {
+export default postcss.plugin('postcss-test-px2rem', options => {
   const opts = { ...defaultOpts, ...options };
   let unit = 'px';
   if (isObject(opts.rootValue)) {
