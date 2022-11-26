@@ -91,8 +91,8 @@ export default postcss.plugin('postcss-test-px2rem', options => {
     css.walkDecls((decl, i) => {
       const _decl = decl;
       // 1st check exclude
-      if (css.source.input.file.indexOf('page') > -1) {
-        console.log(css.source.input.file, css.source.input.file.match(opts.exclude), 'this is test exculde')
+      if (css.source.input.file.indexOf('/page/') > -1) {
+        console.log(css.source.input.file, css.source.input.file.match(opts.exclude), opts.exclude, 'this is test exculde')
       }
       if (opts.exclude && css.source.input.file && css.source.input.file.match(opts.exclude) !== null) return;
       // 2st check 'px'
